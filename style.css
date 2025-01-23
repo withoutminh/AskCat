@@ -1,27 +1,25 @@
 /* Bấm Restore Down và điều chỉnh cửa sổ cho đến khi dấu cộng rớt chính xác trên cái chuông */
-
 body { 
     position: relative;
     margin: 0;
 } 
 
   
-  .container {
+.container {
     display: grid;
     height: 100vh;
     place-items: center;
   }
   
-  .text {
+.text {
     position: absolute;
     top: 240px;
     font-size: 36px;
     color: #34495e;
-  
     z-index: 1;
   }
   
-  .button {
+.button {
     position: absolute;
     right: -255px;
     top: 60px;
@@ -41,11 +39,11 @@ body {
     }
   }
   
-  .button-wrapper {
+.button-wrapper {
     position: relative;
   }
   
-  input {
+input {
     position: absolute;
     height: 33px;
     left: -270px;
@@ -56,7 +54,7 @@ body {
     border-radius: 10px;
   }
   
-  .meow {
+.meow {
     position: absolute;
     bottom: 180px;
     left: 180px;
@@ -65,7 +63,7 @@ body {
     color: #34495e;
   }
   
-  .thinking-takeover {
+.thinking-takeover {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -73,7 +71,6 @@ body {
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     opacity: 0;
   }
-  
   .cat {
     position: absolute;
     width: 300px;
@@ -84,7 +81,7 @@ body {
     border-radius: 140px 140px 0px 0px;
   }
   
-  .ear {
+.ear {
     width: 0;
     height: 0;
     border-top: 80px solid darkgoldenrod;
@@ -92,17 +89,17 @@ body {
     top: 10px;
   }
   
-  .ear.left {
+.ear.left {
     border-right: 80px solid transparent;
     left: 10px;
   }
   
-  .ear.right {
+.ear.right {
     border-left: 80px solid transparent;
     right: 10px;
   }
   
-  .eye {
+.eye {
     width: 25px;
     height: 5px;
     background-color: black;
@@ -111,21 +108,21 @@ body {
     top: 90px;
   }
   
-  .eye.left {
+.eye.left {
     left: 100px;
   }
   
-  .eye.right {
+.eye.right {
     right: 100px;
   }
   
-  .bell {
+.bell {
     position: absolute;
     bottom: 20px;
     right: 170px;
   }
   
-  .base {
+.base {
     position: absolute;
     width: 50px;
     height: 25px;
@@ -133,7 +130,7 @@ body {
     background-color: #f1c40f;
   }
   
-  .stem {
+.stem {
     width: 5px;
     height: 15px;
     background-color: #f1c40f;
@@ -142,7 +139,7 @@ body {
     left: 22px;
   }
   
-  .top {
+.top {
     width: 16px;
     height: 3px;
     background-color: #f1c40f;
@@ -151,7 +148,7 @@ body {
     left: 17px;
   }
   
-  .tip-screen {
+.tip-screen {
     position: absolute;
     top: 150px;
     font-family: monospace;
@@ -159,15 +156,15 @@ body {
     opacity: 0;
   }
   
-  .title {
+.title {
     font-size: 20px;
   }
   
-  .title, .sub-title {
+.title, .sub-title {
     margin-bottom: 10px;
   } 
   
-  .tip {
+.tip {
     padding: 10px 20px;
     margin-bottom: 10px;
     border: 2px solid black;
@@ -176,43 +173,43 @@ body {
   
   /* animation start */
   
-  .animating {
-    .button {
+.animating {
+  .button {
       animation-name: turn-into-ball, drop;
       animation-duration: .25s, .25s;
       animation-delay: 0s, 1s;
       animation-fill-mode: forwards;
       animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), ease-in;
     }
-    .top {
+  .top {
       animation-name: bell;
       animation-duration: .2s;
       animation-delay: 1.1s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
     }
-    .eye {
+  .eye {
       animation-name: eye-open, eye-close, eye-open;
       animation-duration: .05s, .05s, .05s;
       animation-delay: 1.3s, 3.3s, 10.3s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
     }
-    .thinking-takeover {
+  .thinking-takeover {
       animation-name: thinking;
       animation-duration: 7s;
       animation-delay: 3.5s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
     }
-    .meow {
+  .meow {
       animation-name: meow;
       animation-duration: 1s;
       animation-delay: 16.5s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
     }
-    .tip-screen {
+  .tip-screen {
       animation-name: tip;
       animation-duration: 2s;
       animation-delay: 18s;
@@ -221,13 +218,13 @@ body {
     }
   }
   
-  @keyframes turn-into-ball {
+@keyframes turn-into-ball {
     100% {
       width: 10px;
     }
   }
   
-  @keyframes drop {
+@keyframes drop {
     33% {
       transform: translateY(203px);
     }
@@ -239,27 +236,27 @@ body {
     }
   }
   
-  @keyframes bell {
+@keyframes bell {
     100% {
       transform: translateY(5px);
     }
   }
   
-  @keyframes eye-open {
+@keyframes eye-open {
     100% {
       height: 25px;
       top: 85px;
     }
   }
   
-  @keyframes eye-close {
+@keyframes eye-close {
     100% {
       height: 5px;
       top: 90px;
     }
   }
   
-  @keyframes thinking {
+@keyframes thinking {
     0% {
       opacity: 0;
     }
@@ -274,7 +271,7 @@ body {
     }
   }
   
-  @keyframes meow {
+@keyframes meow {
     50% {
       opacity: 1;
       transform: rotate(-25deg) scale(1.2);
@@ -285,10 +282,9 @@ body {
     }
   }
   
-  @keyframes tip {
+@keyframes tip {
     100% {
       opacity: 1;
     }
   }
   
-  /* animation end */
