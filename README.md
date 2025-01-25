@@ -1,6 +1,6 @@
 # Introduce
 
-Some fun code I found on TikTok and decide translate it to Vietnamese
+Some fun code I found on TikTok and decided translate it to Vietnamese
 
 ## Image
 
